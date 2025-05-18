@@ -1,0 +1,17 @@
+{
+  "name": "serverless-realworld-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "yarn workspaces run build",
+    "test": "yarn workspaces run test",
+    "build:frontend": "yarn workspace frontend build",
+    "build:backend": "yarn workspace backend build",
+    "test:frontend": "yarn workspace frontend test",
+    "test:backend": "yarn workspace backend test"
+  }
+}
