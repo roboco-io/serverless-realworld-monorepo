@@ -3,7 +3,7 @@ You:
 
 링크의 프론트 엔드 리포지토리와 백엔드 리포지토리를 하나의 리포지토리로 묶어서 모노리포로 만들고 싶어.
 https://github.com/roboco-io/realworld-backend-serverless-microservice
-https://github.com/serithemage/realworld-front
+https://github.com/roboco-io/realworld-front
 어떻게 해야할까?
 
 ChatGPT: 
