@@ -1,0 +1,44 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 변경된 파일 목록 가져오기
+CHANGED_FILES=$(git diff --cached --name-only --diff-filter=ACMR)
+
+# 변경된 파일이 없으면 종료
+if [ -z "$CHANGED_FILES" ]; then
+  echo "No files to lint or test"
+  exit 0
+fi
+
+# lint-staged 실행 (lint 및 테스트)
+npx lint-staged
+
+# 프론트엔드 변경 여부 확인
+FRONTEND_CHANGED=false
+echo "$CHANGED_FILES" | grep -q "apps/frontend/" && FRONTEND_CHANGED=true
+
+# 백엔드 변경 여부 확인
+BACKEND_CHANGED=false
+echo "$CHANGED_FILES" | grep -q "apps/backend/" && BACKEND_CHANGED=true
+
+# 공유 패키지 변경 여부 확인
+PACKAGES_CHANGED=false
+echo "$CHANGED_FILES" | grep -q "packages/" && PACKAGES_CHANGED=true
+
+# 변경된 부분에 따라 빌드 실행
+if [ "$FRONTEND_CHANGED" = true ]; then
+  echo "Frontend files changed. Running frontend build..."
+  npm run build:frontend || { echo "Frontend build failed"; exit 1; }
+fi
+
+if [ "$BACKEND_CHANGED" = true ]; then
+  echo "Backend files changed. Running backend build..."
+  npm run build:backend || { echo "Backend build failed"; exit 1; }
+fi
+
+if [ "$PACKAGES_CHANGED" = true ]; then
+  echo "Shared packages changed. Running full build..."
+  npm run build || { echo "Full build failed"; exit 1; }
+fi
+
+exit 0

@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 커밋 메시지 형식 검증
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat $COMMIT_MSG_FILE)
+
+# 커밋 메시지 형식 정규식 패턴
+# 형식: <type>: <subject>
+# 예: feat: Add new feature
+PATTERN="^(feat|fix|docs|style|refactor|test|chore|perf|ci|build|revert)(\([a-z-]+\))?: .+"
+
+if ! echo "$COMMIT_MSG" | grep -E "$PATTERN" > /dev/null; then
+  echo "Error: Invalid commit message format."
+  echo "Commit message must match format: <type>: <subject>"
+  echo "Valid types: feat, fix, docs, style, refactor, test, chore, perf, ci, build, revert"
+  echo "Example: feat: Add new feature"
+  exit 1
+fi
+
+exit 0
