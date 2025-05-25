@@ -7,6 +7,15 @@
 
 이 코드베이스는 모노레포 구조와 서버리스 아키텍처를 사용하여 [RealWorld](https://github.com/gothinkster/realworld) 명세를 준수하는 풀스택 애플리케이션(프론트엔드 + 백엔드)을 포함하고 있습니다.
 
+## 프로젝트 목적
+
+이 프로젝트는 패스트캠퍼스의 "바이브코딩 패러다임: AI도 대체할 수 없는 개발자의 개발방식" 강의의 데모용으로 작성되었습니다. 바이브 코딩을 사용해서 모놀리식 백엔드를 서버리스 마이크로 서비스로 전환하고, 각각 존재하던 백엔드와 프론트엔드 프로젝트를 모노리포로 통합하는 내용을 담고 있습니다.
+
+## 오리지널 리포지토리
+
+- 프론트엔드: [realworld-front(Next.js 14)](https://github.com/salahadin-dinsafa/realworld-front)
+- 백엔드: [realworld-backend-spring-boot-java-keycloak-postgresql](https://github.com/marcusmonteirodesouza/realworld-backend-spring-boot-java-keycloak-postgresql)
+
 ## 개요
 
 이 프로젝트는 다음을 사용하여 현대적인 웹 애플리케이션을 구축하는 방법을 보여줍니다:
