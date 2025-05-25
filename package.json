@@ -47,15 +47,15 @@
   "lint-staged": {
     "apps/frontend/**/*.{js,ts,tsx}": [
       "npm run lint:fix -- --quiet",
-      "jest --findRelatedTests --passWithNoTests"
+      "npx jest --findRelatedTests --passWithNoTests"
     ],
     "apps/backend/**/*.{js,ts}": [
       "npm run lint:fix -- --quiet",
-      "jest --findRelatedTests --passWithNoTests"
+      "npx jest --findRelatedTests --passWithNoTests"
     ],
     "packages/**/*.{js,ts}": [
       "npm run lint:fix -- --quiet",
-      "jest --findRelatedTests --passWithNoTests"
+      "npx jest --findRelatedTests --passWithNoTests"
     ]
   }
 }

@@ -1,0 +1,1 @@
+{"version":3,"file":"profile.d.ts","sourceRoot":"","sources":["../../src/api/profile.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,qBAAqB,CAAC;AAE9C;;GAEG;AACH,MAAM,WAAW,eAAe;IAC9B,OAAO,EAAE,OAAO,CAAC;CAClB;AAED;;GAEG;AACH,MAAM,MAAM,cAAc,GAAG,eAAe,CAAC"}
