@@ -33,7 +33,7 @@ graph TD
     G --> H
     B -.-> I[Keycloak]
     
-    subgraph "모놀리식 애플리케이션"
+    subgraph mono["모놀리식 애플리케이션"]
         B
         C
         D
@@ -48,7 +48,7 @@ graph TD
     class C,D,E,F,G module
     class H database
     class I auth
-    class "모놀리식 애플리케이션" container
+    class mono container
 ```
 
 ### 2.2. 마이그레이션 후 아키텍처 (서버리스 마이크로서비스)
@@ -84,23 +84,23 @@ graph TD
     F -.-> N
 
     
-    subgraph "유저 서비스"
+    subgraph user["유저 서비스"]
         C
         H
     end
-    subgraph "프로필서비스"
+    subgraph profile["프로필서비스"]
         D
         I
     end
-    subgraph "아티클서비스"
+    subgraph article["아티클서비스"]
         E
         J
     end
-    subgraph "댓글서비스"
+    subgraph comment["댓글서비스"]
         F
         K
     end
-    subgraph "태그서비스"
+    subgraph tag["태그서비스"]
         G
         L
     end
@@ -112,11 +112,11 @@ graph TD
     class H,I,J,K,L dynamodb
     class M cognito
     class N eventbridge
-    class "유저 서비스" service
-    class "프로필서비스" service
-    class "아티클서비스" service
-    class "댓글서비스" service
-    class "태그서비스" service
+    class user service
+    class profile service
+    class article service
+    class comment service
+    class tag service
 ```
 
 ## 3. 주요 컴포넌트
