@@ -26,7 +26,5 @@ module.exports = {
       '@project': path.resolve(__dirname, '../packages/'),
     },
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-  ],
+  plugins: [new CleanWebpackPlugin()],
 };
