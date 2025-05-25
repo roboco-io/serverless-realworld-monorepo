@@ -12,6 +12,14 @@
 
 ```mermaid
 graph TD
+    %% 색상 정의 - 라이트/다크 모드 모두 고려
+    classDef frontend fill:#4B8BBE,stroke:#2D74DF,color:white,stroke-width:2px
+    classDef springboot fill:#6DB33F,stroke:#4F9E2F,color:white,stroke-width:2px,font-weight:bold
+    classDef module fill:#F5F5F5,stroke:#CCCCCC,color:#333333,stroke-width:1px
+    classDef database fill:#3E6E93,stroke:#2D5A7B,color:white,stroke-width:2px
+    classDef auth fill:#FF9900,stroke:#E68A00,color:white,stroke-width:2px
+    classDef container fill:transparent,stroke:#6DB33F,stroke-width:2px,stroke-dasharray:5 5,color:#6DB33F
+    
     A[프론트엔드] --> B[Spring Boot 애플리케이션]
     B --> C[Users Module]
     B --> D[Profiles Module]
@@ -33,6 +41,14 @@ graph TD
         F
         G
     end
+    
+    %% 스타일 적용
+    class A frontend
+    class B springboot
+    class C,D,E,F,G module
+    class H database
+    class I auth
+    class 모놀리식 애플리케이션 container
 ```
 
 ### 2.2. 마이그레이션 후 아키텍처 (서버리스 마이크로서비스)
@@ -41,6 +57,15 @@ graph TD
 
 ```mermaid
 graph TD
+    %% 색상 정의 - 라이트/다크 모드 모두 고려
+    classDef frontend fill:#4B8BBE,stroke:#2D74DF,color:white,stroke-width:2px
+    classDef apigateway fill:#E7157B,stroke:#C1085C,color:white,stroke-width:2px
+    classDef lambda fill:#FF9900,stroke:#E68A00,color:white,stroke-width:2px
+    classDef dynamodb fill:#3F8624,stroke:#2E6417,color:white,stroke-width:2px
+    classDef cognito fill:#DD344C,stroke:#B01B2E,color:white,stroke-width:2px
+    classDef eventbridge fill:#FF4F8B,stroke:#D13B74,color:white,stroke-width:2px
+    classDef service fill:transparent,stroke:#FF9900,stroke-width:2px,stroke-dasharray:5 5,color:#FF9900
+    
     A[프론트엔드] --> B[API Gateway]
     B --> C[Users Lambda]
     B --> D[Profiles Lambda]
@@ -79,6 +104,15 @@ graph TD
         G
         L
     end
+    
+    %% 스타일 적용
+    class A frontend
+    class B apigateway
+    class C,D,E,F,G lambda
+    class H,I,J,K,L dynamodb
+    class M cognito
+    class N eventbridge
+    class 유저 서비스,프로필서비스,아티클서비스,댓글서비스,태그서비스 service
 ```
 
 ## 3. 주요 컴포넌트
