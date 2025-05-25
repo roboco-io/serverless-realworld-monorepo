@@ -126,15 +126,24 @@ yarn workspace backend deploy
 
 - [프로젝트 계획](docs/project-plan.md) - 상세한 프로젝트 로드맵 및 구현 계획
 - [모노레포 통합](docs/ideation.md) - 모노레포 구조 및 통합 접근 방식에 대한 정보
-- **레거시 코드베이스 분석**:
-  - [개요](docs/legacy-codebase-analysis/README.md) - 레거시 코드베이스 분석 소개
-  - [01. 공유 데이터 타입](docs/legacy-codebase-analysis/01_공유_데이터_타입_.md) - 공유 데이터 타입 분석
-  - [02. 프론트엔드 사용자 액션 및 세션 관리](docs/legacy-codebase-analysis/02_프론트엔드_사용자_액션_및_세션_관리_.md) - 프론트엔드 사용자 상호작용 분석
-  - [03. 프론트엔드 API 라우트](docs/legacy-codebase-analysis/03_프론트엔드_api_라우트_.md) - 프론트엔드 API 라우트 분석
-  - [04. 백엔드 API 엔드포인트 (컨트롤러)](docs/legacy-codebase-analysis/04_백엔드_api_엔드포인트__컨트롤러__.md) - 백엔드 API 컨트롤러 분석
-  - [05. 백엔드 핵심 서비스 로직](docs/legacy-codebase-analysis/05_백엔드_핵심_서비스_로직_.md) - 백엔드 서비스 구현 분석
-  - [06. 백엔드 데이터 모델 및 영속성](docs/legacy-codebase-analysis/06_백엔드_데이터_모델_및_영속성_.md) - 데이터 모델 및 데이터베이스 상호작용 분석
-  - [07. 백엔드 인증 및 보안](docs/legacy-codebase-analysis/07_백엔드_인증_및_보안_.md) - 인증 메커니즘 분석
+
+### 백엔드 마이그레이션 문서
+
+- [마이크로서비스 아키텍처 설계 및 마이그레이션 계획](apps/backend/docs/migration/microservice-migration-architecture.md) - 모놀리식에서 서버리스 마이크로서비스로의 전환 계획
+- [인프라 및 CI/CD 설정](apps/backend/docs/migration/iac-cicd.md) - 인프라 코드와 지속적 통합 배포 파이프라인 설정
+- [데이터 영속성 마이그레이션](apps/backend/docs/migration/persistence-migration.md) - PostgreSQL에서 DynamoDB로의 데이터 마이그레이션
+- [Keycloak 설정 가이드](apps/backend/docs/set-up-keycloak/README.md) - 인증 및 권한 부여를 위한 Keycloak 설정
+
+### 레거시 코드베이스 분석
+
+- [개요](docs/legacy-codebase-analysis/README.md) - 레거시 코드베이스 분석 소개
+- [01. 공유 데이터 타입](docs/legacy-codebase-analysis/01_공유_데이터_타입_.md) - 공유 데이터 타입 분석
+- [02. 프론트엔드 사용자 액션 및 세션 관리](docs/legacy-codebase-analysis/02_프론트엔드_사용자_액션_및_세션_관리_.md) - 프론트엔드 사용자 상호작용 분석
+- [03. 프론트엔드 API 라우트](docs/legacy-codebase-analysis/03_프론트엔드_api_라우트_.md) - 프론트엔드 API 라우트 분석
+- [04. 백엔드 API 엔드포인트 (컨트롤러)](docs/legacy-codebase-analysis/04_백엔드_api_엔드포인트__컨트롤러__.md) - 백엔드 API 컨트롤러 분석
+- [05. 백엔드 핵심 서비스 로직](docs/legacy-codebase-analysis/05_백엔드_핵심_서비스_로직_.md) - 백엔드 서비스 구현 분석
+- [06. 백엔드 데이터 모델 및 영속성](docs/legacy-codebase-analysis/06_백엔드_데이터_모델_및_영속성_.md) - 데이터 모델 및 데이터베이스 상호작용 분석
+- [07. 백엔드 인증 및 보안](docs/legacy-codebase-analysis/07_백엔드_인증_및_보안_.md) - 인증 메커니즘 분석
 
 ## 기여하기
 
