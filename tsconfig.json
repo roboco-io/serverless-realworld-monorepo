@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@project/shared-types": ["packages/shared-types/src"],
+      "@project/api-client": ["packages/api-client/src"],
+      "@project/validation": ["packages/validation/src"],
+      "@project/utils": ["packages/utils/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "build"]
+}
