@@ -12,7 +12,7 @@
 
 ```mermaid
 graph TD
-    A[사용자] --> B[Spring Boot 애플리케이션]
+    A[프론트엔드] --> B[Spring Boot 애플리케이션]
     B --> C[Users Module]
     B --> D[Profiles Module]
     B --> E[Articles Module]
@@ -41,7 +41,7 @@ graph TD
 
 ```mermaid
 graph TD
-    A[사용자] --> B[API Gateway]
+    A[프론트엔드] --> B[API Gateway]
     B --> C[Users Lambda]
     B --> D[Profiles Lambda]
     B --> E[Articles Lambda]
@@ -57,14 +57,27 @@ graph TD
     C -.-> N[EventBridge]
     E -.-> N
     F -.-> N
-    N -.-> G
+
     
-    subgraph "서버리스 마이크로서비스"
+    subgraph "유저 서비스"
         C
+        H
+    end
+    subgraph "프로필서비스"
         D
+        I
+    end
+    subgraph "아티클서비스"
         E
+        J
+    end
+    subgraph "댓글서비스"
         F
+        K
+    end
+    subgraph "태그서비스"
         G
+        L
     end
 ```
 

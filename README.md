@@ -117,6 +117,15 @@ Additional documentation is available in the `docs/` directory:
 
 - [Project Plan](docs/project-plan.md) - Detailed project roadmap and implementation plan
 - [Monorepo Integration](docs/ideation.md) - Information about the monorepo structure and integration approach
+- **Legacy Codebase Analysis**:
+  - [Overview](docs/legacy-codebase-analysis/README.md) - Introduction to the legacy codebase analysis
+  - [01. Shared Data Types](docs/legacy-codebase-analysis/01_공유_데이터_타입_.md) - Analysis of shared data types
+  - [02. Frontend User Actions and Session Management](docs/legacy-codebase-analysis/02_프론트엔드_사용자_액션_및_세션_관리_.md) - Analysis of frontend user interactions
+  - [03. Frontend API Routes](docs/legacy-codebase-analysis/03_프론트엔드_api_라우트_.md) - Analysis of frontend API routes
+  - [04. Backend API Endpoints (Controllers)](docs/legacy-codebase-analysis/04_백엔드_api_엔드포인트__컨트롤러__.md) - Analysis of backend API controllers
+  - [05. Backend Core Service Logic](docs/legacy-codebase-analysis/05_백엔드_핵심_서비스_로직_.md) - Analysis of backend service implementations
+  - [06. Backend Data Models and Persistence](docs/legacy-codebase-analysis/06_백엔드_데이터_모델_및_영속성_.md) - Analysis of data models and database interactions
+  - [07. Backend Authentication and Security](docs/legacy-codebase-analysis/07_백엔드_인증_및_보안_.md) - Analysis of authentication mechanisms
 
 ## Contributing
 

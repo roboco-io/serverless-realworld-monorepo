@@ -4,7 +4,7 @@
 
 ## 목차
 
-1. [아키텍처 설계](architecture.md)
+1. [아키텍처 마이그레이션 계획](microservice-migration-architecture.md)
 2. [퍼시스턴스 레이어 전환](persistence-migration.md)
 3. [IaC 및 CI/CD](iac-cicd.md)
 
