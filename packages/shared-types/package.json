@@ -1,0 +1,32 @@
+{
+  "name": "@project/shared-types",
+  "version": "1.0.0",
+  "description": "Shared TypeScript type definitions for the RealWorld application",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "clean": "rimraf dist",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "jest",
+    "prepare": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "realworld"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^5.0.5",
+    "typescript": "^5.5.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=4.0.0"
+  }
+}

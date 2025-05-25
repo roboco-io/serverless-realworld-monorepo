@@ -8,8 +8,8 @@
   ],
   "scripts": {
     "build": "npm run build:all",
-    "build:all": "npm workspaces run build",
-    "test": "npm workspaces run test",
+    "build:all": "npm -ws run build",
+    "test": "npm -ws run test",
     "build:frontend": "npm workspace frontend build",
     "build:backend": "npm workspace backend build",
     "test:frontend": "npm workspace frontend test",
@@ -47,15 +47,15 @@
   "lint-staged": {
     "apps/frontend/**/*.{js,ts,tsx}": [
       "npm run lint:fix -- --quiet",
-      "npm run test:frontend -- --findRelatedTests --passWithNoTests"
+      "jest --findRelatedTests --passWithNoTests"
     ],
     "apps/backend/**/*.{js,ts}": [
       "npm run lint:fix -- --quiet",
-      "npm run test:backend -- --findRelatedTests --passWithNoTests"
+      "jest --findRelatedTests --passWithNoTests"
     ],
     "packages/**/*.{js,ts}": [
       "npm run lint:fix -- --quiet",
-      "npm test -- --findRelatedTests --passWithNoTests"
+      "jest --findRelatedTests --passWithNoTests"
     ]
   }
 }
